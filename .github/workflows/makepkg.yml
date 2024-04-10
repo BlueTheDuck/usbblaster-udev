@@ -16,6 +16,9 @@ jobs:
         with:
           ref: archpkg
 
+      - name: Change working dir perms
+        run: chmod a=rwx
+        
       - name: Call makepkg
         run: sudo -u nobody makepkg
       
